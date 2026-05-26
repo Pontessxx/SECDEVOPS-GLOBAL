@@ -1,128 +1,164 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ASTRAFARM | Agricultura Espacial</title>
-    
+<title>ASTRAFARM | Agricultura Espacial</title>
 
-    <style>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
 
-        body {
-            background: radial-gradient(circle at top, #0a0f1c, #050816);
-            color: #ffffff;
-            line-height: 1.6;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        /* HEADER */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #050816;
+    color: #ffffff;
+    line-height: 1.6;
+}
 
-        header {
-            padding: 50px 20px;
-            text-align: center;
-            border-bottom: 1px solid #1e2a4a;
-        }
+/* HERO COM IMAGEM */
 
-        header h1 {
-            font-size: 3rem;
-            color: #00d4ff;
-            text-shadow: 0 0 15px #00d4ff;
-        }
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(5,8,22,0.7), rgba(5,8,22,1)),
+    url("https://images.unsplash.com/photo-1446776811953-b23d57bd21aa");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
-        header p {
-            margin-top: 10px;
-            color: #cbd5ff;
-        }
+.hero h1 {
+    font-family: 'Orbitron';
+    font-size: 3.5rem;
+    color: #00d4ff;
+    text-shadow: 0 0 20px #00d4ff;
+}
 
-        /* SECTIONS */
+.hero p {
+    margin-top: 10px;
+    color: #cbd5ff;
+}
 
-        section {
-            padding: 70px 20px;
-        }
+/* SECTIONS */
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-        }
+section {
+    padding: 80px 20px;
+}
 
-        /* TITLES */
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
 
-        h2 {
-            color: #00d4ff;
-            margin-bottom: 25px;
-            text-align: center;
-        }
+/* GRID (texto + imagem) */
 
-        /* TEXT */
+.grid {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
-        p {
-            margin-bottom: 20px;
-            color: #cbd5ff;
-        }
+.grid img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0,212,255,0.2);
+}
 
-        /* LIST */
+.text {
+    flex: 1;
+}
 
-        ul {
-            margin: 20px 0;
-            padding-left: 20px;
-        }
+/* TITLES */
 
-        li {
-            margin-bottom: 10px;
-        }
+h2 {
+    color: #00d4ff;
+    margin-bottom: 20px;
+}
 
-        /* CARD STYLE (para blocos importantes) */
+/* TEXT */
 
-        .highlight {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid #1e2a4a;
-            padding: 25px;
-            border-radius: 15px;
-            margin-top: 20px;
-            backdrop-filter: blur(10px);
-        }
+p {
+    margin-bottom: 20px;
+    color: #cbd5ff;
+}
 
-        /* FOOTER */
+/* LIST */
 
-        footer {
-            background: #050816;
-            padding: 20px;
-            text-align: center;
-            font-size: 13px;
-            border-top: 1px solid #1e2a4a;
-        }
+ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
 
-        /* ANIMAÇÃO */
+/* HIGHLIGHT */
 
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: 0.8s;
-        }
+.highlight {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid #1e2a4a;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
 
-        .fade-in.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
+/* PARALLAX SECTION */
 
-    </style>
+.parallax {
+    background: linear-gradient(rgba(5,8,22,0.8), rgba(5,8,22,1)),
+    url("https://images.unsplash.com/photo-1451187580459-43490279c0fa");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #1e2a4a;
+    font-size: 13px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width: 768px){
+    .grid {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-    <header>
+<!-- HERO -->
+
+<section class="hero">
+    <div>
         <h1>ASTRAFARM</h1>
         <p>Sem comida, não há missão. Sem ASTRAFARM, não há futuro no espaço.</p>
-    </header>
+    </div>
+</section>
 
-    <section class="fade-in">
-        <div class="container">
+<!-- INTRO -->
+
+<section>
+    <div class="container grid">
+        
+        <div class="text">
             <h2>O Futuro da Agricultura Espacial</h2>
 
             <p>O propósito do ASTRAFARM é viabilizar a produção sustentável de alimentos em ambientes extremos, especialmente em missões espaciais de longa duração, onde a dependência da Terra se torna inviável. O sistema foi concebido para atuar como uma infraestrutura inteligente de cultivo, utilizando dados, automação e inteligência artificial para garantir eficiência no uso de recursos limitados como água, energia e oxigênio.</p>
@@ -131,10 +167,20 @@
 
             <p>Ao mesmo tempo, o projeto também tem como propósito trazer essas tecnologias para a Terra, aplicando os mesmos princípios em regiões com escassez de recursos, como áreas áridas, locais isolados ou afetados por mudanças climáticas.</p>
         </div>
-    </section>
 
-    <section class="fade-in">
-        <div class="container">
+        <img src="https://images.unsplash.com/photo-1581091870627-3d1d46bcb1f3" alt="agricultura espacial">
+
+    </div>
+</section>
+
+<!-- PROBLEMA -->
+
+<section class="parallax">
+    <div class="container grid">
+
+        <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa" alt="espaço">
+
+        <div class="text">
             <h2>O Problema e a Necessidade</h2>
 
             <p>A exploração espacial moderna está entrando em uma nova fase: não se trata mais apenas de visitar o espaço, mas de permanecer nele. Missões para Marte, bases na Lua e estações orbitais avançadas exigem autonomia total dos astronautas, principalmente em relação à alimentação.</p>
@@ -153,36 +199,31 @@
 
             <p><strong>A resposta está na combinação de tecnologia espacial, inteligência artificial e automação. O sistema foi criado para antecipar problemas, otimizar recursos e garantir produção contínua mesmo em condições adversas.</strong></p>
         </div>
-    </section>
 
-    <section class="fade-in">
-        <div class="container">
+    </div>
+</section>
+
+<!-- ODS -->
+
+<section>
+    <div class="container grid">
+
+        <div class="text">
             <h2>Conexão com ODS 2 - Agricultura Sustentável</h2>
 
             <p>O ASTRAFARM está diretamente alinhado ao ODS 2 Agricultura Sustentável, pois propõe uma solução inovadora para a produção de alimentos em ambientes com extrema limitação de recursos, como estações espaciais e futuras colônias fora da Terra. A solução utiliza tecnologias avançadas para otimizar o uso de água, energia e nutrientes, garantindo eficiência produtiva mesmo em condições adversas.</p>
 
             <p>Além do contexto espacial, o sistema também pode ser aplicado em regiões da Terra que enfrentam desafios semelhantes, como áreas com escassez hídrica, solos improdutivos ou condições climáticas extremas. Dessa forma, o ASTRAFARM contribui para o desenvolvimento de novos modelos de agricultura sustentável, reduzindo desperdícios e ampliando o acesso à produção de alimentos.</p>
         </div>
-    </section>
 
-    <footer>
-        <p>© 2026 ASTRAFARM | Operação Reconexão</p>
-    </footer>
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="agricultura sustentável">
 
-    <script>
-        const elements = document.querySelectorAll('.fade-in');
+    </div>
+</section>
 
-        window.addEventListener('scroll', () => {
-            elements.forEach(el => {
-                const position = el.getBoundingClientRect().top;
-                const screenHeight = window.innerHeight;
+<footer>
+    <p>© 2026 ASTRAFARM | Operação Reconexão</p>
+</footer>
 
-                if(position < screenHeight - 100){
-                    el.classList.add('active');
-                }
-            });
-        });
-    </script>
-    <script src="index.js"></script>
 </body>
 </html>
